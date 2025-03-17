@@ -28,11 +28,25 @@
             item.classList.toggle("active")
         })
     })
-    let items = document.querySelector(".items")
+    
+    let items = document.querySelector(".items");
     for (let j = 0; j < 63; j++) {
-        let div = document.createElement("div")
-        div.classList.add("item")
-        items.appendChild(div)
+        let div = document.createElement("div");
+        div.classList.add("item");
+        items.appendChild(div);
     }
+
+    // Add text 'Sanno' inside the heart (span)
+    let heartSpans = document.querySelectorAll("span");
+    heartSpans.forEach((span, index) => {
+        if (index === Math.floor(heartSpans.length / 2)) { // Place the name at the center
+            span.textContent = "Sanno";
+            span.style.color = "red"; // Optional: Add color to the name
+            span.style.fontSize = "18px"; // Optional: Increase font size for the name
+            span.style.fontWeight = "bold"; // Optional: Make the text bold
+            span.style.textAlign = "center"; // Center the text in the span
+            span.style.lineHeight = "30px"; // Align vertically
+        }
+    });
 </script>
 </html>
