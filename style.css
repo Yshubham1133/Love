@@ -21,6 +21,8 @@ span{
     height: 30px;
     display: block;
     cursor: pointer;
+    font-family: Arial, sans-serif; /* Added font family */
+    text-align: center;
 }
 span::before{
     content: "";
@@ -159,8 +161,6 @@ span.active::before{
     }
 }
 
-
-
 @media screen and (max-width: 658px)   {
     .box {
         position: absolute;
@@ -171,4 +171,5 @@ span.active::before{
         top: 15%;
         left: 0;
     }
+}
 }
